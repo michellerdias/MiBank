@@ -60,7 +60,7 @@ public class Conta {
 	}
 	
 	public void sacar(Double valor) {
-		if (valor < 0 && this.getSaldo() >= valor) {
+		if (valor > 0 && this.getSaldo() >= valor) {
 			setSaldo(getSaldo() - valor);
 			System.out.println("Seu saque foi realizado com sucesso!");	
 		} else {
